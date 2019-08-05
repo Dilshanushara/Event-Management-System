@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">My Event</string>
+    <string name="Esti">Estimate people</string>
+    <string name="E.Type">Event Type</string>
+    <string name="Sponsors">Sponsors</string>
+    <string name="Plan">Plan my Event</string>
+    <string name="Wedding">Wedding</string>
+    <string name="Bday">B\'day party</string>
+    <string name="Corporate">Corporate function</string>
+    <string name="Other">Other</string>
+    <string name="Yes">yes</string>
+    <string name="no">No</string>
+
+
+<string-array name="event">
+
+    <item>My Events</item>
+    <item> Delete Event</item>
+    <item>Update Event</item>
+    <item>Add another Event</item>
+</string-array>
+    <string name="Place">Event Place</string>
+    <string name="Date">Enter the date</string>
+    <string name="Next">Next</string>
+
 </resources>
