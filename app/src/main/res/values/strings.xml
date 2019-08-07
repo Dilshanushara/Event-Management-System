@@ -16,6 +16,7 @@
     <string name="myevents">My Events</string>
     <string name="prof">My Profile</string>
     <string name="logout">Log out</string>
+    <string name="Addaevent">Add a Event</string>
 
 
     <string-array name="event">

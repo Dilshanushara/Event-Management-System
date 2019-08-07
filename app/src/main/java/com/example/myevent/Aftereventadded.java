@@ -114,11 +114,16 @@ public class Aftereventadded extends AppCompatActivity
 
         } else if (id == R.id.logout) {
 
-        } else if (id == R.id.nav_tools) {
+
+        } else if (id == R.id.Addaevent) {
+
+
 
         } else if (id == R.id.nav_share) {
 
+
         } else if (id == R.id.nav_send) {
+
 
         }
 
