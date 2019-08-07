@@ -10,6 +10,12 @@
     <string name="Other">Other</string>
     <string name="Yes">yes</string>
     <string name="no">No</string>
+    <string name="open">No</string>
+
+    <string name="close">No</string>
+    <string name="myevents">My Events</string>
+    <string name="prof">My Profile</string>
+    <string name="logout">Log out</string>
 
 
     <string-array name="event">
@@ -44,5 +50,6 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="title_activity_aftereventadded">Aftereventadded</string>
 
 </resources>
