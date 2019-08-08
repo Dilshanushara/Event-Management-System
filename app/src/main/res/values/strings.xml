@@ -53,5 +53,18 @@
     <string name="menu_send">Send</string>
     <string name="title_activity_aftereventadded">Aftereventadded</string>
     <string name="evname">Event name</string>
+    <string name="vwEvtreg">Register As Event Planner</string>
+    <string name="evtregvewfullname">fullname</string>
+    <string name="evtregvewemail">Email</string>
+    <string name="evtregvewnumber">Phone Number</string>
+    <string name="evtregvewage">Age</string>
+    <string name="evtregvewdescription">Description Of Events</string>
+    <string name="evtregvewpassword">Password</string>
+    <string name="evtregvewerepassword">Re Enter Password</string>
+    <string name="evtbtnnext">NEXT</string>
+    <string name="title_activity_registeraseventplanner2">registeraseventplanner2</string>
+    <string name="evtbtncancel">Cancel</string>
+    <string name="evtvtnsubmit">Submit</string>
+    <string name="evtbtncontinue">Continue >></string>
 
 </resources>

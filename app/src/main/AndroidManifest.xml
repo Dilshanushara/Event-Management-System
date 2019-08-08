@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Myallevents"></activity>
+        <activity android:name=".evtwelcomepg"></activity>
+        <activity android:name=".registeraseventplanner2" />
+        <activity android:name=".Myallevents" />
         <activity
             android:name=".Aftereventadded"
             android:label="@string/title_activity_aftereventadded"
@@ -19,7 +21,8 @@
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Splash"
+        <activity
+            android:name=".Splash"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

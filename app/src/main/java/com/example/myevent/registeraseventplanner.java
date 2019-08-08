@@ -1,6 +1,8 @@
 package com.example.myevent;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,4 +13,13 @@ public class registeraseventplanner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registeraseventplanner);
     }
+
+
+    public void sendMessage(View view){
+        Intent intent=new Intent(this,registeraseventplanner2.class);
+
+        startActivity(intent);
+
+    }
+
 }
