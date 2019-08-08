@@ -66,5 +66,6 @@
     <string name="evtbtncancel">Cancel</string>
     <string name="evtvtnsubmit">Submit</string>
     <string name="evtbtncontinue">Continue >></string>
+    <string name="title_activity_evtnavdraw">evtnavdraw</string>
 
 </resources>

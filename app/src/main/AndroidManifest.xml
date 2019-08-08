@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".evtwelcomepg"></activity>
+        <activity
+            android:name=".evtnavdraw"
+            android:label="@string/title_activity_evtnavdraw"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".evtwelcomepg" />
         <activity android:name=".registeraseventplanner2" />
         <activity android:name=".Myallevents" />
         <activity
