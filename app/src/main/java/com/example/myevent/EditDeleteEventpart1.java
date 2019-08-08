@@ -16,7 +16,6 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_delete_eventpart1);
 
-
         b=(Button) findViewById(R.id.button);
 
         b.setOnClickListener(new View.OnClickListener(){
@@ -34,11 +33,8 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
     }
 
     private void openeditdeletepart2() {
-        Intent i=new Intent(this, EditDeleteEvent.class);
+
+        Intent i=new Intent(this, EditDeleteEventpart2.class);
         startActivity(i);
-
-
     }
-
-
 }

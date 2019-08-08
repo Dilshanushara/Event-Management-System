@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class EditDeleteEvent extends AppCompatActivity {
+public class EditDeleteEventpart2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_delete_event);
+        setContentView(R.layout.activity_edit_delete_eventpart2);
     }
 }
