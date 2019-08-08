@@ -15,7 +15,7 @@ public class registeraseventplanner extends AppCompatActivity {
     }
 
 
-    public void sendMessage(View view){
+    public void sendNext(View view){
         Intent intent=new Intent(this,registeraseventplanner2.class);
 
         startActivity(intent);
