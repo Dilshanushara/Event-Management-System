@@ -21,7 +21,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class Aftereventadded extends AppCompatActivity
 
@@ -34,11 +38,15 @@ public class Aftereventadded extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
-
         setContentView(R.layout.activity_aftereventadded);
+
+
+        ListView myeventlist = (ListView) findViewById(R.id.myeventlist);
+        // Log.d("onCreate ,Started");
+
+
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -56,6 +64,9 @@ public class Aftereventadded extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
     }
 
 
@@ -117,15 +128,18 @@ public class Aftereventadded extends AppCompatActivity
 
         } else if (id == R.id.Addaevent) {
 
+            Intent i=new Intent(this, MainActivity.class);
+            startActivity(i);
 
 
-        } else if (id == R.id.nav_share) {
+
+        } //else if (id == R.id.nav_share) {
 
 
-        } else if (id == R.id.nav_send) {
+      //  } else if (id == R.id.nav_send) {
 
 
-        }
+        //}
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

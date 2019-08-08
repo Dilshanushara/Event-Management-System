@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-    private void openaddevent2() {
+    public void openaddevent2() {
 
         Intent i=new Intent(this, Addevent2.class);
         startActivity(i);

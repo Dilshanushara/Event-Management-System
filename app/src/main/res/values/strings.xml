@@ -66,5 +66,7 @@
     <string name="evtbtncancel">Cancel</string>
     <string name="evtvtnsubmit">Submit</string>
     <string name="evtbtncontinue">Continue >></string>
+    <string name="Updateevent">Update event</string>
+    <string name="Deleteevent">Delete My Event</string>
 
 </resources>
