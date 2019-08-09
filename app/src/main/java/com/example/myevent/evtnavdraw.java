@@ -1,5 +1,6 @@
 package com.example.myevent;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -83,6 +84,10 @@ public class evtnavdraw extends AppCompatActivity
             Toast.makeText(getApplicationContext(),"You click on gallary item",Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_profile) {
+
+            Intent intent=new Intent(this,evtprofile.class);
+
+            startActivity(intent);
 
 
 
