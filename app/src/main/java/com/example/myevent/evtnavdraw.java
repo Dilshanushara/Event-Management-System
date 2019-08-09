@@ -27,8 +27,7 @@ import android.widget.Toast;
 public class evtnavdraw extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener
 {
-
-    private CardView message,notification,postadd,cutomerpost;
+    private CardView messagev,notificationv1,postadd,cutomerpost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,19 +48,55 @@ public class evtnavdraw extends AppCompatActivity
 
 
 
-                message = (CardView) findViewById(R.id.message);
-                notification = (CardView) findViewById(R.id.Post);
-                postadd = (CardView) findViewById(R.id.custom);
-                cutomerpost = (CardView) findViewById(R.id.notification);
+                messagev = (CardView) findViewById(R.id.message1234);
+
+                postadd = (CardView) findViewById(R.id.Post);
+
+                cutomerpost= (CardView) findViewById(R.id.custom);
+
+                notificationv1 = (CardView) findViewById(R.id.notification34);
 
 
-                message.setOnClickListener(this);
-                notification.setOnClickListener(this);
+                messagev.setOnClickListener(this);
+                notificationv1.setOnClickListener(this);
                 postadd.setOnClickListener(this);
                 cutomerpost.setOnClickListener(this);
 
 
 
+
+    }
+
+
+
+
+    @Override
+    public void onClick(View view) {
+        Intent i;
+
+        switch (view.getId()){
+
+
+            case R.id.Post : i =new Intent(this,evtpost.class);startActivity(i);break;
+
+
+            case R.id.custom : i =new Intent(this,evtcust.class);startActivity(i);break;
+
+
+
+
+           case R.id.message1234 : i =new Intent(this,evtmessage123.class);startActivity(i);break;
+
+
+            case R.id.notification34 : i =new Intent(this,evtnotification456.class);startActivity(i);break;
+
+
+
+
+            default:break;
+
+
+        }
 
     }
 
@@ -104,7 +139,7 @@ public class evtnavdraw extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_adds) {
-            Toast.makeText(getApplicationContext(),"You click on gallary item",Toast.LENGTH_LONG).show();
+
 
         } else if (id == R.id.nav_profile) {
 
@@ -140,24 +175,5 @@ public class evtnavdraw extends AppCompatActivity
 
 
 
-    @Override
-    public void onClick(View view) {
-        Intent i;
 
-        switch (view.getId()){
-            case R.id.message : i =new Intent(this,evtmessage.class);
-            startActivity(i);
-            break;
-
-            case R.id.notification : i =new Intent(this,evtnotification.class);
-            startActivity(i);
-            break;
-
-
-            default:break;
-
-
-        }
-
-    }
 }

@@ -22,7 +22,7 @@
         >
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/message"
+            android:id="@+id/message1234"
             android:layout_width="120dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -127,7 +127,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/notification"
+            android:id="@+id/notification34"
             android:layout_width="120dp"
             android:layout_height="100dp"
             android:layout_margin="10dp">
