@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".edit_ad"></activity>
+        <activity android:name=".event_details" />
+        <activity android:name=".post_ad" />
+        <activity android:name=".select_ad" />
         <activity
             android:name=".Afterlogin"
             android:label="@string/title_activity_afterlogin"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login" />

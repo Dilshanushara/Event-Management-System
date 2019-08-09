@@ -80,5 +80,9 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_afterlogin">Afterlogin</string>
+    <string name="post_ad">post_ad</string>
+    <string name="view_ad">view_ad</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 
 </resources>
