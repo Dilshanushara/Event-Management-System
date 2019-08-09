@@ -149,6 +149,10 @@ public class evtnavdraw extends AppCompatActivity
             startActivity(i);
             break;
 
+            case R.id.notification : i =new Intent(this,evtnotification.class);
+            startActivity(i);
+            break;
+
 
             default:break;
 
