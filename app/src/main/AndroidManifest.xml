@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".evtprofile"></activity>
-        <activity android:name=".EditDeleteEventpart2" />
+        <activity android:name=".EditDeleteEventpart2" android:parentActivityName=".EditDeleteEventpart1" />
         <activity android:name=".EditDeleteEventpart1" />
         <activity
             android:name=".evtnavdraw"
@@ -18,7 +18,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".evtwelcomepg" />
         <activity android:name=".registeraseventplanner2" />
-        <activity android:name=".Myallevents" />
+        <activity android:name=".Myallevents" android:parentActivityName=".Aftereventadded" />
         <activity
             android:name=".Aftereventadded"
             android:label="@string/title_activity_aftereventadded"

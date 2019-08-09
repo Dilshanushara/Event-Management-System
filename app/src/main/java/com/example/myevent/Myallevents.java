@@ -21,8 +21,12 @@ public class Myallevents extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myallevents);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         ListView myeventlist = (ListView) findViewById(R.id.myeventlist);
        // Log.d("onCreate ,Started");
+
+
 
          ArrayList <String> myarrayy=new ArrayList<>();
 
@@ -30,7 +34,7 @@ public class Myallevents extends AppCompatActivity {
         myarrayy.add("Dulana's b'day party");
 
          myarrayy.add("SLIIT Annual Get to Gether");
-         myarrayy.add("Dinu and Kamal Wedding");
+         myarrayy.add("Chayanika and Lakna's Wedding");
 
 
 
