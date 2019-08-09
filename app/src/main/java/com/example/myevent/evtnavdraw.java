@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
 
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 
@@ -24,7 +25,10 @@ import android.view.Menu;
 import android.widget.Toast;
 
 public class evtnavdraw extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener
+{
+
+    private CardView message,notification,postadd,cutomerpost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,25 @@ public class evtnavdraw extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+
+                message = (CardView) findViewById(R.id.message);
+                notification = (CardView) findViewById(R.id.Post);
+                postadd = (CardView) findViewById(R.id.custom);
+                cutomerpost = (CardView) findViewById(R.id.notification);
+
+
+                message.setOnClickListener(this);
+                notification.setOnClickListener(this);
+                postadd.setOnClickListener(this);
+                cutomerpost.setOnClickListener(this);
+
+
+
+
     }
 
     @Override
@@ -101,5 +124,40 @@ public class evtnavdraw extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Override
+    public void onClick(View view) {
+        Intent i;
+
+        switch (view.getId()){
+            case R.id.message : i =new Intent(this,evtmessage.class);
+            startActivity(i);
+            break;
+
+            case R.id.notification : i =new Intent(this,evtnotification.class);
+            startActivity(i);
+            break;
+
+
+            default:break;
+
+
+        }
+
     }
 }

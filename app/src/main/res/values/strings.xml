@@ -69,5 +69,6 @@
     <string name="title_activity_evtnavdraw">evtnavdraw</string>
     <string name="Deleteevent">Delete Event</string>
     <string name="updateevent">Update My Event</string>
+    <string name="dect">Deactivate</string>
 
 </resources>
