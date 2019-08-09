@@ -48,8 +48,6 @@
                     android:layout_margin="10dp"
                     android:text="Message"
                     android:textSize="15dp" />
-
-
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -160,6 +158,4 @@
 
 
     </LinearLayout>
-
-
 </LinearLayout>

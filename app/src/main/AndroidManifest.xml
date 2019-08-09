@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Forgotpassword"></activity>
+        <activity android:name=".Home" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".Login" />
         <activity
             android:name=".Afterlogin"
             android:label="@string/title_activity_afterlogin"
@@ -52,6 +56,10 @@
             android:name=".Addevent2"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
