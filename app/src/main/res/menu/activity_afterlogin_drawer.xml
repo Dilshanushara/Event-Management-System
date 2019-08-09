@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+
+
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/prof"/>
+        <item
+            android:id="@+id/allevents"
+            android:icon="@drawable/ic_myevents"
+            android:title="@string/myevents" />
+        <item
+            android:id="@+id/Addaevent"
+            android:icon="@drawable/ic_addevent"
+            android:title="@string/Addaevent" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/logout" />
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+        </menu>
+    </item>
+
+</menu>
