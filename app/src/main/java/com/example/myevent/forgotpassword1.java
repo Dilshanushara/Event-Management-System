@@ -1,21 +1,21 @@
 package com.example.myevent;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class Login extends AppCompatActivity {
+public class forgotpassword1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_forgotpassword1);
     }
 
-    public void forgotpw(View view){
-        Intent intent=new Intent(this,Forgotpassword.class);
+    public void done(View view){
+        Intent intent=new Intent(this,Login.class);
 
         startActivity(intent);
 

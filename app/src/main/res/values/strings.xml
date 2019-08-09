@@ -96,6 +96,11 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_afterlogin">Afterlogin</string>
+    <string name="textview13">Forgot Password ?</string>
+    <string name="textview99">text</string>
+    <string name="button11">Submit</string>
+    <string name="textview98">Create new Password</string>
+    <string name="donebutton">Done</string>
     <string name="post_ad">post_ad</string>
     <string name="view_ad">view_ad</string>
     <string name="save">Save</string>
