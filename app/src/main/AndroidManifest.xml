@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".forgotpassword1"></activity>
+        <activity android:name=".evtprofile"></activity>
+        <activity android:name=".forgotpassword1" />
         <activity android:name=".Forgotpassword" />
         <activity android:name=".Home" />
         <activity android:name=".SignUp" />
@@ -21,14 +22,13 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".evtprofile" />
         <activity
             android:name=".EditDeleteEventpart2"
             android:parentActivityName=".EditDeleteEventpart1" />
         <activity android:name=".EditDeleteEventpart1" />
         <activity
             android:name=".evtnavdraw"
-            android:label="@string/title_activity_evtnavdraw"
+            android:label="My Event"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".evtwelcomepg" />
         <activity android:name=".registeraseventplanner2" />
