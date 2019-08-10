@@ -140,12 +140,19 @@ public class evtnavdraw extends AppCompatActivity
 
         if (id == R.id.nav_adds) {
 
+                Intent intent = new Intent(this, select_ad.class);
+
+                startActivity(intent);
+
+
+
+
 
         } else if (id == R.id.nav_profile) {
 
-            Intent intent=new Intent(this,evtprofile.class);
+          //  Intent intent=new Intent(this,ev.class);
 
-            startActivity(intent);
+           // startActivity(intent);
 
 
 

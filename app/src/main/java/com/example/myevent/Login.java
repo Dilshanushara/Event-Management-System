@@ -20,4 +20,19 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void afterlogin(View view){
+        Intent intent=new Intent(this,Afterlogin.class);
+
+        startActivity(intent);
+
+    }
+
+
+
+
+
+
+
+
 }
