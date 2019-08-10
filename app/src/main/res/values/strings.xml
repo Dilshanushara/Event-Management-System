@@ -105,5 +105,11 @@
     <string name="view_ad">view_ad</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+    <string name="textview20">My Event</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="mobilenumber">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="buttonsignup">Sign Up</string>
 
 </resources>
