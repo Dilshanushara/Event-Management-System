@@ -9,15 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".evtprofile"></activity>
+        <activity android:name=".evtnotification4567"></activity>
+        <activity android:name=".evtmessage1234" />
+        <activity android:name=".evtcust12" />
+        <activity android:name=".evtpost12" />
+        <activity android:name=".evtprofile" />
         <activity android:name=".forgotpassword1" />
         <activity android:name=".Forgotpassword" />
         <activity android:name=".Home" />
         <activity android:name=".SignUp" />
         <activity android:name=".Login" />
+        <activity android:name=".post_ad" />
+        <activity android:name=".select_ad" />
+        <activity android:name=".edit_ad" />
+        <activity android:name=".event_details" />
+        <activity android:name=".Register" />
+
         <activity
             android:name=".Afterlogin"
-            android:label="@string/title_activity_afterlogin"
+            android:label="My Event"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.login.LoginActivity"
@@ -37,7 +47,7 @@
             android:parentActivityName=".Aftereventadded" />
         <activity
             android:name=".Aftereventadded"
-            android:label="@string/title_activity_aftereventadded"
+            android:label="My Event"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".registeraseventplanner" />
         <activity
@@ -57,6 +67,10 @@
             android:name=".Addevent2"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -14,7 +14,7 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
     }
     public void regcust(View view){
-        Intent intent=new Intent(this,evtwelcomepg.class);
+        Intent intent=new Intent(this,Register.class);
 
         startActivity(intent);
 

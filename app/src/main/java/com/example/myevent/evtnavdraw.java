@@ -48,13 +48,13 @@ public class evtnavdraw extends AppCompatActivity
 
 
 
-                messagev = (CardView) findViewById(R.id.message1234);
+                messagev = (CardView) findViewById(R.id.message12345);
 
-                postadd = (CardView) findViewById(R.id.Post);
+                postadd = (CardView) findViewById(R.id.Post1);
 
-                cutomerpost= (CardView) findViewById(R.id.custom);
+                cutomerpost= (CardView) findViewById(R.id.custom1);
 
-                notificationv1 = (CardView) findViewById(R.id.notification34);
+                notificationv1 = (CardView) findViewById(R.id.notification345);
 
 
                 messagev.setOnClickListener(this);
@@ -77,18 +77,18 @@ public class evtnavdraw extends AppCompatActivity
         switch (view.getId()){
 
 
-            case R.id.Post : i =new Intent(this,evtpost.class);startActivity(i);break;
+            case R.id.Post1 : i =new Intent(this,post_ad.class);startActivity(i);break;
 
 
-            case R.id.custom : i =new Intent(this,evtcust.class);startActivity(i);break;
+            case R.id.custom1 : i =new Intent(this,evtcust12.class);startActivity(i);break;
 
 
 
 
-           case R.id.message1234 : i =new Intent(this,evtmessage123.class);startActivity(i);break;
+           case R.id.message12345 : i =new Intent(this,evtmessage1234.class);startActivity(i);break;
 
 
-            case R.id.notification34 : i =new Intent(this,evtnotification456.class);startActivity(i);break;
+            case R.id.notification345 : i =new Intent(this,evtnotification4567.class);startActivity(i);break;
 
 
 
@@ -140,7 +140,7 @@ public class evtnavdraw extends AppCompatActivity
 
         if (id == R.id.nav_adds) {
 
-                Intent intent = new Intent(this, select_ad.class);
+                Intent intent = new Intent(this, event_details.class);
 
                 startActivity(intent);
 
@@ -150,9 +150,9 @@ public class evtnavdraw extends AppCompatActivity
 
         } else if (id == R.id.nav_profile) {
 
-          //  Intent intent=new Intent(this,ev.class);
+            Intent intent = new Intent(this, evtprofile.class);
 
-           // startActivity(intent);
+            startActivity(intent);
 
 
 

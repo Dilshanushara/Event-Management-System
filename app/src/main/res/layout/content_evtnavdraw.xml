@@ -22,7 +22,7 @@
         >
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/message1234"
+            android:id="@+id/message12345"
             android:layout_width="120dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -53,7 +53,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/Post"
+            android:id="@+id/Post1"
             android:layout_width="120dp"
             android:layout_height="100dp"
             android:layout_margin="10dp">
@@ -94,7 +94,7 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/custom"
+            android:id="@+id/custom1"
             android:layout_width="120dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -127,7 +127,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/notification34"
+            android:id="@+id/notification345"
             android:layout_width="120dp"
             android:layout_height="100dp"
             android:layout_margin="10dp">

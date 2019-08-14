@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class evtnotification456 extends AppCompatActivity {
+public class evtcust12 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_evtnotification456);
+        setContentView(R.layout.activity_evtcust12);
     }
 }
