@@ -1,14 +1,16 @@
-package com.example.myevent;
+package com.example.myevent.EventPlanner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class evtcust12 extends AppCompatActivity {
+import com.example.myevent.R;
+
+public class EventProfile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_evtcust12);
+        setContentView(R.layout.activity_evtprofile);
     }
 }

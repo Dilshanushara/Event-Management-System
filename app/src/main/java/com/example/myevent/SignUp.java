@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myevent.EventPlanner.EventPlannerRegister1;
+
 public class SignUp extends AppCompatActivity {
 
     @Override
@@ -20,7 +22,7 @@ public class SignUp extends AppCompatActivity {
 
     }
     public void regevnt(View view){
-        Intent intent=new Intent(this,registeraseventplanner.class);
+        Intent intent=new Intent(this, EventPlannerRegister1.class);
 
         startActivity(intent);
 

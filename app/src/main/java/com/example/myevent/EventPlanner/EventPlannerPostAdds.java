@@ -1,10 +1,12 @@
-package com.example.myevent;
+package com.example.myevent.EventPlanner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class evtpost12 extends AppCompatActivity {
+import com.example.myevent.R;
+
+public class EventPlannerPostAdds extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

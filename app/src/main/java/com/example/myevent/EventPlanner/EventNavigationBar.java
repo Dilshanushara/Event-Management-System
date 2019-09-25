@@ -1,10 +1,7 @@
-package com.example.myevent;
+package com.example.myevent.EventPlanner;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
 
@@ -14,6 +11,9 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 
+import com.example.myevent.R;
+import com.example.myevent.event_details;
+import com.example.myevent.post_ad;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -22,9 +22,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
-import android.widget.Toast;
 
-public class evtnavdraw extends AppCompatActivity
+public class EventNavigationBar extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener
 {
     private CardView messagev,notificationv1,postadd,cutomerpost;
@@ -77,18 +76,18 @@ public class evtnavdraw extends AppCompatActivity
         switch (view.getId()){
 
 
-            case R.id.Post1 : i =new Intent(this,post_ad.class);startActivity(i);break;
+            case R.id.Post1 : i =new Intent(this, post_ad.class);startActivity(i);break;
 
 
-            case R.id.custom1 : i =new Intent(this,evtcust12.class);startActivity(i);break;
+            case R.id.custom1 : i =new Intent(this, EventPlannerCustomerPost.class);startActivity(i);break;
 
 
 
 
-           case R.id.message12345 : i =new Intent(this,evtmessage1234.class);startActivity(i);break;
+           case R.id.message12345 : i =new Intent(this, EventPlannerMessage.class);startActivity(i);break;
 
 
-            case R.id.notification345 : i =new Intent(this,evtnotification4567.class);startActivity(i);break;
+            case R.id.notification345 : i =new Intent(this, evtnotification4567.class);startActivity(i);break;
 
 
 
@@ -150,7 +149,7 @@ public class evtnavdraw extends AppCompatActivity
 
         } else if (id == R.id.nav_profile) {
 
-            Intent intent = new Intent(this, evtprofile.class);
+            Intent intent = new Intent(this, EventProfile.class);
 
             startActivity(intent);
 
@@ -169,18 +168,12 @@ public class evtnavdraw extends AppCompatActivity
     }
 
 
+    public static class evtnotification4567 extends AppCompatActivity {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_evtnotification4567);
+        }
+    }
 }

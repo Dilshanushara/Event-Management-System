@@ -9,11 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".evtnotification4567"></activity>
-        <activity android:name=".evtmessage1234" />
-        <activity android:name=".evtcust12" />
-        <activity android:name=".evtpost12" />
-        <activity android:name=".evtprofile" />
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".EventPlanner.EventNavigationBar$evtnotification4567" />
+        <activity android:name=".EventPlanner.EventPlannerMessage" />
+        <activity android:name=".EventPlanner.EventPlannerCustomerPost" />
+        <activity android:name=".EventPlanner.EventPlannerPostAdds" />
+        <activity android:name=".EventPlanner.EventProfile" />
         <activity android:name=".forgotpassword1" />
         <activity android:name=".Forgotpassword" />
         <activity android:name=".Home" />
@@ -24,7 +28,6 @@
         <activity android:name=".edit_ad" />
         <activity android:name=".event_details" />
         <activity android:name=".Register" />
-
         <activity
             android:name=".Afterlogin"
             android:label="My Event"
@@ -37,11 +40,11 @@
             android:parentActivityName=".EditDeleteEventpart1" />
         <activity android:name=".EditDeleteEventpart1" />
         <activity
-            android:name=".evtnavdraw"
+            android:name=".EventPlanner.EventNavigationBar"
             android:label="My Event"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".evtwelcomepg" />
-        <activity android:name=".registeraseventplanner2" />
+        <activity android:name=".EventPlanner.EventPlannerWelcomePage" />
+        <activity android:name=".EventPlanner.EventPlannerRegister2" />
         <activity
             android:name=".Myallevents"
             android:parentActivityName=".Aftereventadded" />
@@ -49,11 +52,7 @@
             android:name=".Aftereventadded"
             android:label="My Event"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".registeraseventplanner" />
-        <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EventPlanner.EventPlannerRegister1" />
         <activity
             android:name=".Splash"
             android:theme="@style/AppTheme.NoActionBar">
