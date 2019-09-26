@@ -14,7 +14,7 @@ import com.example.myevent.R;
 public class EventPlannerRegister1 extends AppCompatActivity {
 
     EditText name,email,phone,age;
-    Button next;
+    Button next,BtnEventPlannerSignIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,8 @@ public class EventPlannerRegister1 extends AppCompatActivity {
         phone = (EditText)findViewById(R.id.EdtEventPlannerPhone);
         age = (EditText)findViewById(R.id.EdtEventPlannerAge);
 
-        next = (Button)findViewById(R.id.BtnEventPlannerNext);
+        next = (Button)findViewById(R.id.btnEventPlannerNext);
+        BtnEventPlannerSignIn = (Button)findViewById(R.id.BtnEventPlannerSignIn);
 
 
 
@@ -51,6 +52,16 @@ public class EventPlannerRegister1 extends AppCompatActivity {
 
                 startActivity(intent);
 
+            }
+        });
+
+
+
+        BtnEventPlannerSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(EventPlannerRegister1.this, EventPlannerSignIn.class);
+                startActivity(intent);
             }
         });
 

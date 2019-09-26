@@ -160,7 +160,7 @@
         app:layout_constraintVertical_bias="0.775" />
 
     <Button
-        android:id="@+id/BtnEventPlannerNext"
+        android:id="@+id/BtnEventPlannerSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -169,17 +169,38 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/mybutton"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:text="Sign In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
+
+    <Button
+        android:id="@+id/btnEventPlannerNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/mybutton"
         android:onClick="sendNext"
+        android:padding="10dp"
         android:text="@string/evtbtnnext"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.879"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929"
-        android:padding="10dp"
-        android:textColor="#ffffff"
-        android:background="@drawable/mybutton"/>
+        app:layout_constraintVertical_bias="0.929" />
 
     <EditText
         android:id="@+id/EdtEventPlannerEmail"
