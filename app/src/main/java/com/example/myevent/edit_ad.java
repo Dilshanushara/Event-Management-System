@@ -54,7 +54,7 @@ public class edit_ad extends AppCompatActivity {
 
 
             DatabaseReference updRef = FirebaseDatabase.getInstance().getReference().child("edit_ad1");
-            updRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            updRef.addListenerForSingleValueEvent (new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -85,11 +85,13 @@ public class edit_ad extends AppCompatActivity {
                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 }
-
+            }}
             });
         }
             private void openaftereditad() {           //create a method to open a the next activity
                 Intent i = new Intent(this, select_ad.class);
                 startActivity(i);
         }
+
+    }
 
