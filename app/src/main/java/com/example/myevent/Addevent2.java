@@ -82,24 +82,30 @@ public class Addevent2 extends AppCompatActivity {
                 if (validate == true) {        //check if the validation is true
 
 
-                    dbref = FirebaseDatabase.getInstance().getReference().child("Events");      //declare the firebase reference
+                    dbref = FirebaseDatabase.getInstance().getReference().child("Events");//declare the firebase reference
 
-                    evt = new Event();            //create a object from Event model class
-                    evt.setEname(ename);          //set the values to the object
-                    evt.setPlace(eplace);
-                    evt.setType(etype);
-                    evt.setDate(txt_date.getText().toString().trim());
-                    evt.setPeople(txt_people.getText().toString().trim());
-                    evt.setSponsors(strsponsor);
+                    try {
 
 
-                    dbref.child(evt.getEname().toString()).setValue(evt);   //pass the Event object to the databse
+                        evt = new Event();            //create a object from Event model class
+                        evt.setEname(ename);          //set the values to the object
+                        evt.setPlace(eplace);
+                        evt.setType(etype);
+                        evt.setDate(txt_date.getText().toString().trim());
+                        evt.setPeople(txt_people.getText().toString().trim());
+                        evt.setSponsors(strsponsor);
 
-                    //display toast message if the data saved successfully
-                    Toast.makeText(getApplicationContext(), "Data saved succesfully", Toast.LENGTH_LONG).show();
-                    openafteraddevent();
-                    cleancontrol();
 
+                        dbref.child(evt.getEname().toString()).setValue(evt);   //pass the Event object to the databse
+
+                        //display toast message if the data saved successfully
+                        Toast.makeText(getApplicationContext(), "Data saved succesfully", Toast.LENGTH_LONG).show();
+                        openafteraddevent();
+                        cleancontrol();
+
+                    }catch (Exception e){
+                        Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_LONG).show();
+                    }
                 }
 
 

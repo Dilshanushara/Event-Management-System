@@ -161,34 +161,39 @@ public class EditDeleteEventpart2 extends AppCompatActivity {
 
                     final Event evt = new Event();
                     dbref = FirebaseDatabase.getInstance().getReference().child("Events");
+                    try {
 
-                    dbref.addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        dbref.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                            if (dataSnapshot.hasChild(eventidname)) {
+                                if (dataSnapshot.hasChild(eventidname)) {
 
-                                evt.setEname(ename.toString().trim());               //set the values to Event object using set methods
-                                evt.setPlace(eplace.toString().trim());
-                                evt.setType(etype);
-                                evt.setDate(txt_date.getText().toString().trim());
-                                evt.setPeople(txt_people.getText().toString().trim());
-                                evt.setSponsors(strsponsor);
+                                    evt.setEname(ename.toString().trim());               //set the values to Event object using set methods
+                                    evt.setPlace(eplace.toString().trim());
+                                    evt.setType(etype);
+                                    evt.setDate(txt_date.getText().toString().trim());
+                                    evt.setPeople(txt_people.getText().toString().trim());
+                                    evt.setSponsors(strsponsor);
 
-                                dbref.child(evt.getEname().toString()).setValue(evt);    //pass the event object to the database
+                                    dbref.child(evt.getEname().toString()).setValue(evt);    //pass the event object to the database
 
-                                //make a toast  if the data updated successfully
-                                Toast.makeText(getApplicationContext(), "Update success", Toast.LENGTH_LONG).show();
+                                    //make a toast  if the data updated successfully
+                                    Toast.makeText(getApplicationContext(), "Update success", Toast.LENGTH_LONG).show();
 
-                                openmyallevent();
+                                    openmyallevent();
+                                }
                             }
-                        }
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                        }
-                    });
+                            }
+                        });
+
+                    }catch (Exception e){
+                        Toast.makeText(getApplicationContext(), "Update Error", Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });
