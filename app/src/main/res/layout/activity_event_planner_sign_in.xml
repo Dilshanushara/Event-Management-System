@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/background_dark"
-            android:text="0702378999"
+
             android:textColor="@android:color/background_dark"
             android:textSize="34sp"
             android:inputType="phone"
@@ -65,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/background_dark"
-            android:text="1234"
+
             android:textColor="@android:color/background_dark"
             android:textSize="34sp"
             android:inputType="textPassword"

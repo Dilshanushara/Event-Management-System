@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.myevent.Common.Common;
 import com.example.myevent.Model.EventPlanner;
 import com.example.myevent.R;
 import com.google.firebase.database.DataSnapshot;
@@ -48,27 +49,23 @@ public class EventPlannerRegister2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                tabel_eventplanner.addValueEventListener(new ValueEventListener() {
+
+                tabel_eventplanner.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-
-
-
-                        if(dataSnapshot.child(EventPlannerPhone).exists()){
-                            Toast.makeText(EventPlannerRegister2.this,"Phone number already register",Toast.LENGTH_SHORT).show();
-                        }else{
+                        if (dataSnapshot.hasChild(EventPlannerPhone)) {
+                            // run some code
+                            Toast.makeText(EventPlannerRegister2.this,"All ready exist!",Toast.LENGTH_SHORT).show();
+                        }else {
 
 
                             EventPlanner eventPlanner = new EventPlanner(EventPlannerName,EventPlannerEmail, EventPlannerPhone,EventPlannerAge,EdtEventPlannerDescription.getText().toString(),EdtEventPlannerPassword.getText().toString() );
                             tabel_eventplanner.child(EventPlannerPhone).setValue(eventPlanner);
                             Toast.makeText(EventPlannerRegister2.this,"Sign up is done!",Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(EventPlannerRegister2.this,EventPlannerWelcomePage.class);
-                            startActivity(intent);
+                            Intent reg2 = new Intent(EventPlannerRegister2.this,EventPlannerRegister1.class);
+                            startActivity(reg2);
                             finish();
-
                         }
-
                     }
 
                     @Override
@@ -78,12 +75,20 @@ public class EventPlannerRegister2 extends AppCompatActivity {
                 });
 
 
+
+                        }
+
+
+
+                });
+
+
             }
-        });
+;
 
 
     }
 
 
 
-}
+
