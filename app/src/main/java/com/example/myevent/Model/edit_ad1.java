@@ -1,17 +1,21 @@
-package com.example.myevent;
+package com.example.myevent.Model;
 
 public class edit_ad1 {
-    private String name;
+
+    private String Name;
     private String description;
     private String Email;
-    private Integer ConNo;
+    private int ConNo;
+
+    public edit_ad1() {
+    }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        Name = name;
     }
 
     public String getDescription() {
@@ -30,11 +34,11 @@ public class edit_ad1 {
         Email = email;
     }
 
-    public Integer getConNo() {
+    public int getConNo() {
         return ConNo;
     }
 
-    public void setConNo(Integer conNo) {
+    public void setConNo(int conNo) {
         ConNo = conNo;
     }
 }
