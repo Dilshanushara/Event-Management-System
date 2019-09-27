@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.myevent.Common.Common;
+//import com.example.myevent.Common.Common;
 import com.example.myevent.Model.EventPlanner;
 import com.example.myevent.R;
 import com.google.firebase.database.DataSnapshot;
@@ -58,7 +58,7 @@ public class EventPlannerSignIn extends AppCompatActivity {
                             if (eventPlanner.getPassword().equals(edtPassword.getText().toString())) {
                                 Toast.makeText(EventPlannerSignIn.this, "Sign in Successfull", Toast.LENGTH_SHORT).show();
                                 Intent signIn = new Intent(EventPlannerSignIn.this, EventPlannerWelcomePage.class);
-                                Common.currenteventplanner =eventPlanner;
+                                //Common.currenteventplanner =eventPlanner;
                                 startActivity(signIn);
 
                             } else {
