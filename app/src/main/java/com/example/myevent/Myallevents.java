@@ -22,15 +22,11 @@ import java.util.ArrayList;
 
 public class Myallevents extends AppCompatActivity {
 
-
-
     DatabaseReference dbref;
 
     ArrayAdapter<String>adapter;
     ArrayList<String>arrayList;
     Event evt;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,22 +35,15 @@ public class Myallevents extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
         evt=new Event();
         final ListView listView= (ListView) findViewById(R.id.myeventlist);
-       // Log.d("onCreate ,Started");
 
         final FirebaseDatabase[] databse = {FirebaseDatabase.getInstance()};
         dbref = FirebaseDatabase.getInstance().getReference().child("Events");
 
          arrayList=new ArrayList<>();
 
-
-
-
-
-        adapter=new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,arrayList);
+         adapter=new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,arrayList);
 
         dbref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -68,10 +57,6 @@ public class Myallevents extends AppCompatActivity {
                 }
                 listView.setAdapter(adapter);
 
-
-
-
-
             }
 
             @Override
@@ -81,8 +66,7 @@ public class Myallevents extends AppCompatActivity {
         });
 
 
-
-                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                         Intent i1=new Intent(Myallevents.this,EditDeleteEventpart1.class);
@@ -91,15 +75,5 @@ public class Myallevents extends AppCompatActivity {
                     }
                 });
 
-
-
-
-
-
-
-
-
-
-
-}
+    }
 }

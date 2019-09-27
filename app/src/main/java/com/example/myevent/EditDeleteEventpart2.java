@@ -29,8 +29,6 @@ public class EditDeleteEventpart2 extends AppCompatActivity {
 
     RadioGroup radio_Sponsors;
     RadioButton Sponsorsoption;
-
-
     String strsponsor;
 
     @Override
@@ -40,26 +38,19 @@ public class EditDeleteEventpart2 extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
         txt_date=findViewById(R.id.txtdate);
         txt_people=findViewById(R.id.txtpeople);
-
 
         final String eventidname= getIntent().getStringExtra("clickid").toString();
         final String eplace= getIntent().getStringExtra("eplace").toString();
         final String ename= getIntent().getStringExtra("ename").toString();
         final String etype= getIntent().getStringExtra("radiotype");
 
-
-
         radio_Sponsors = findViewById(R.id.radioGroup2);
 
         radio_Sponsors.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
-
 
                 Sponsorsoption=radio_Sponsors.findViewById(i);
 
@@ -80,9 +71,6 @@ public class EditDeleteEventpart2 extends AppCompatActivity {
             }
         });
 
-
-        //txt_people.setText(eplace);
-
         dbref = FirebaseDatabase.getInstance().getReference().child("Events").child(eventidname);
 
         dbref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -93,11 +81,8 @@ public class EditDeleteEventpart2 extends AppCompatActivity {
                 if (dataSnapshot.hasChildren()){
                     txt_people.setText(dataSnapshot.child("people").getValue().toString());
                     txt_date.setText(dataSnapshot.child("date").getValue().toString());
-                    //    txt_type.setText(dataSnapshot.child("type").getValue());
-                    //txt_num.setText(dataSnapshot.child("num").getValue().toString());
+
                 }
-
-
 
                 else{
                     Toast.makeText(getApplicationContext(),"No values to retrieve",Toast.LENGTH_LONG).show();
@@ -146,15 +131,6 @@ public class EditDeleteEventpart2 extends AppCompatActivity {
             }
 
         });
-
-
-
-
-
-
-
-
-
         b=(Button) findViewById(R.id.buttonupdate);
 
         b.setOnClickListener(new View.OnClickListener(){

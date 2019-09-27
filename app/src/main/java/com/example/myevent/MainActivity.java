@@ -24,37 +24,19 @@ public class MainActivity extends AppCompatActivity {
 
     private Button b,button;
     DatabaseReference dbref;
-
-
     String ename, eplace;
     EditText txt_place, txt_name,txt_type;
-
-
     RadioGroup radio_type;
-
-
-
     RadioButton Etypeoption;
-
-
     String streventtype;
-
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         txt_name=findViewById(R.id.txtname);
         txt_place=findViewById(R.id.txtplace);
-
-
 
         radio_type =findViewById(R.id.radiotype);
 
@@ -89,11 +71,6 @@ public class MainActivity extends AppCompatActivity {
     }
 });
 
-
-
-
-
-
         b=(Button) findViewById(R.id.button);
 
         b.setOnClickListener(new View.OnClickListener(){
@@ -109,12 +86,10 @@ public class MainActivity extends AppCompatActivity {
                     openaddevent2();
                 }
             }
-
-
         });
 
 
-        }
+    }
 
     public void openaddevent2() {
 
@@ -123,13 +98,8 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("ename",txt_name.getText().toString());
         i.putExtra("eplace",txt_place.getText().toString());
         i.putExtra("radiotype", streventtype);
-
-
         startActivity(i);
     }
-
-
-
 
     public boolean validation(){
         final    String name=txt_name.getText().toString();
@@ -137,41 +107,18 @@ public class MainActivity extends AppCompatActivity {
         String eventplace= txt_place.getEditableText().toString().trim();
         String eventname=txt_name.getEditableText().toString().trim();
 
-        if(eventplace.isEmpty()) {
-            txt_place.setError("Field can't be empty");
+        if(eventname.isEmpty()) {
+            txt_name.setError("Field can't be empty");
             return false;
         }
-        else if(eventname.isEmpty()){
-            txt_name.setError("Field can't be empty");
+        else if(eventplace.isEmpty()){
+            txt_place.setError("Field can't be empty");
             return  false;
         }
-
-
-
-//
-//        if (eventname != name){
-//            txt_name.setError("can't change the event name");
-//            return  false;
-//        }
-
-
-
         else
             return true;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

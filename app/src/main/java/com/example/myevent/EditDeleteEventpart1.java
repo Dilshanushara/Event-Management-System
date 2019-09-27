@@ -28,18 +28,11 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
     private Button b,button;
     DatabaseReference dbref;
 
-
     String ename, eplace;
     EditText txt_place, txt_name,txt_type;
 
-
     RadioGroup radio_type;
-
-
-
     RadioButton Etypeoption;
-
-
     String streventtype;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -48,23 +41,13 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_delete_eventpart1);
 
-
-       // mtoolbar = findViewById(R.id.toolbar);
         txt_name=findViewById(R.id.txtname);
         txt_place=findViewById(R.id.txtplace);
-
-
-
         radio_type =findViewById(R.id.radiotype);
-
-
-
 
         radio_type.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
-
 
                 Etypeoption= radio_type.findViewById(i);
 
@@ -92,50 +75,29 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
             }
         });
 
-        //   mtoolbar.setTitle(bundle.getString("ename"));
+        final String tempholder= getIntent().getStringExtra("clickid").toString();
+        button=findViewById(R.id.button);
 
 
-            final String tempholder= getIntent().getStringExtra("clickid").toString();
+        dbref =FirebaseDatabase.getInstance().getReference().child("Events").child(tempholder);
 
-            button=findViewById(R.id.button);
-
-
-
-                dbref =FirebaseDatabase.getInstance().getReference().child("Events").child(tempholder);
-
-                dbref.addListenerForSingleValueEvent(new ValueEventListener() {
+        dbref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-
                         if (dataSnapshot.hasChildren()){
                             txt_name.setText(dataSnapshot.child("ename").getValue().toString());
-
-
                             txt_place.setText(dataSnapshot.child("place").getValue().toString());
-                        //    txt_type.setText(dataSnapshot.child("type").getValue());
-                            //txt_num.setText(dataSnapshot.child("num").getValue().toString());
-
 
                         }
-
-
 
                         else{
                             Toast.makeText(getApplicationContext(),"No values to retrieve",Toast.LENGTH_LONG).show();
                         }
-
-
-
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
-
-
-
-
-
 
                     }
                 });
@@ -147,8 +109,6 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-
-
                 boolean validation =validation();
 
                 if (validation==true) {
@@ -188,21 +148,9 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
             return false;
         }
 
-//
-//        if (eventname != name){
-//            txt_name.setError("can't change the event name");
-//            return  false;
-//        }
-
-
-
         else
             return true;
 
     }
-
-
-
-
 }
 

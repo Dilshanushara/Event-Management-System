@@ -22,19 +22,13 @@ import com.google.firebase.database.ValueEventListener;
 public class Addevent2 extends AppCompatActivity {
 
     private Button b;
-
-
-
     EditText txt_date, txt_people;
     DatabaseReference dbref;
 
     RadioGroup radio_Sponsors;
     RadioButton Sponsorsoption;
 
-
     String strsponsor;
-
-
     Event evt;
 
 
@@ -44,12 +38,8 @@ public class Addevent2 extends AppCompatActivity {
         setContentView(R.layout.activity_addevent2);
 
 
-
         txt_date=findViewById(R.id.txtdate);
         txt_people=findViewById(R.id.txtpeople);
-
-
-
 
         b=(Button) findViewById(R.id.addevent);
 
@@ -57,19 +47,11 @@ public class Addevent2 extends AppCompatActivity {
         final String ename= getIntent().getStringExtra("ename").toString();
         final String etype= getIntent().getStringExtra("radiotype");
 
-
-
-
-
-
-
         radio_Sponsors = findViewById(R.id.radioGroup2);
 
         radio_Sponsors.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
-
 
                 Sponsorsoption=radio_Sponsors.findViewById(i);
 
@@ -89,12 +71,6 @@ public class Addevent2 extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
-
-
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,8 +91,6 @@ public class Addevent2 extends AppCompatActivity {
                     evt.setSponsors(strsponsor);
 
 
-                    //dbref.push().setValue(std);
-                    //  dbref.child("IT002").setValue(std);
                     dbref.child(evt.getEname().toString()).setValue(evt);
 
 
@@ -133,20 +107,7 @@ public class Addevent2 extends AppCompatActivity {
 
         });
 
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
 
     private void openafteraddevent() {
         Intent i = new Intent(this, Aftereventadded.class);
@@ -155,17 +116,10 @@ public class Addevent2 extends AppCompatActivity {
 
     }
 
-
-
-
-
-
     private void cleancontrol() {
 
         txt_people.setText("");
         txt_date.setText("");
-
-
     }
 
 
@@ -187,18 +141,6 @@ public class Addevent2 extends AppCompatActivity {
             return true;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
