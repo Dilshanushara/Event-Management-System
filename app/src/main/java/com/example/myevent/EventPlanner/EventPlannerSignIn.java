@@ -60,6 +60,7 @@ public class EventPlannerSignIn extends AppCompatActivity {
                                 Intent signIn = new Intent(EventPlannerSignIn.this, EventPlannerWelcomePage.class);
                                 //Common.currenteventplanner =eventPlanner;
                                 startActivity(signIn);
+                                finish();
 
                             } else {
                                 Toast.makeText(EventPlannerSignIn.this, "Wrong Password", Toast.LENGTH_SHORT).show();

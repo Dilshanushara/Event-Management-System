@@ -51,6 +51,7 @@ public class EventPlannerRegister1 extends AppCompatActivity {
 
 
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -60,8 +61,8 @@ public class EventPlannerRegister1 extends AppCompatActivity {
         BtnEventPlannerSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(EventPlannerRegister1.this, EventPlannerSignIn.class);
-                startActivity(intent);
+                Intent reg1=new Intent(EventPlannerRegister1.this, EventPlannerSignIn.class);
+                startActivity(reg1);
             }
         });
 

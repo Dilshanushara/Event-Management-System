@@ -28,7 +28,7 @@
         tools:text="          Hello..! \n   Welcome To My\n           Event" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btndeactivate"
         android:layout_width="112dp"
         android:layout_height="57dp"
         android:layout_marginStart="16dp"
