@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
 
-    private Button b,button;
+    private Button b,button;                    //declare all variables
     DatabaseReference dbref;
     String ename, eplace;
     EditText txt_place, txt_name,txt_type;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txt_name=findViewById(R.id.txtname);
+        txt_name=findViewById(R.id.txtname);      //asign  xml file textfileds id to edit text variables
         txt_place=findViewById(R.id.txtplace);
 
         radio_type =findViewById(R.id.radiotype);
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         Etypeoption= radio_type.findViewById(i);
 
-        switch(i) {
+        switch(i) {                                          //Check the event type user selecting radio button from switch case
             case R.id.radioButton:
                 streventtype =  Etypeoption.getText().toString();
                 break;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     }
 });
 
-        b=(Button) findViewById(R.id.button);
+        b=(Button) findViewById(R.id.button);     //assign button id to button b variable;
 
         b.setOnClickListener(new View.OnClickListener(){
 
@@ -79,11 +79,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                boolean validation = validation();
+                boolean validation = validation();      //assign validation return value to validation variable
 
-                if (validation == true) {
+                if (validation == true) {        //check if the validation is true
 
-                    openaddevent2();
+                    openaddevent2();            //if it's true execute openaddevent2 method
                 }
             }
         });
@@ -93,9 +93,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void openaddevent2() {
 
-        Intent i=new Intent(this, Addevent2.class);
+        Intent i=new Intent(this, Addevent2.class);     //create a intent
 
-        i.putExtra("ename",txt_name.getText().toString());
+        i.putExtra("ename",txt_name.getText().toString());     //pass the values to the addevent2 activity using intent putextra
         i.putExtra("eplace",txt_place.getText().toString());
         i.putExtra("radiotype", streventtype);
         startActivity(i);
@@ -104,16 +104,16 @@ public class MainActivity extends AppCompatActivity {
     public boolean validation(){
         final    String name=txt_name.getText().toString();
 
-        String eventplace= txt_place.getEditableText().toString().trim();
+        String eventplace= txt_place.getEditableText().toString().trim();   //assign edit text values to String variables
         String eventname=txt_name.getEditableText().toString().trim();
 
-        if(eventname.isEmpty()) {
-            txt_name.setError("Field can't be empty");
-            return false;
+        if(eventname.isEmpty()) {                  //check the assigned String variables are empty
+            txt_name.setError("Field can't be empty");   //set a error message
+            return false;                               //if the variable is empty return false
         }
-        else if(eventplace.isEmpty()){
-            txt_place.setError("Field can't be empty");
-            return  false;
+        else if(eventplace.isEmpty()){         //check the assigned String variables are empty
+            txt_place.setError("Field can't be empty");  //set a error message
+            return  false;                        //if the variable is empty return false
         }
         else
             return true;

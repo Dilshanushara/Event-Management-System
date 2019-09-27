@@ -24,8 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class EditDeleteEventpart1 extends AppCompatActivity {
 
-    Toolbar mtoolbar;
-    private Button b,button;
+
+    private Button b,button;                      //declare all variables
     DatabaseReference dbref;
 
     String ename, eplace;
@@ -41,7 +41,7 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_delete_eventpart1);
 
-        txt_name=findViewById(R.id.txtname);
+        txt_name=findViewById(R.id.txtname);                   //asign  xml file textfileds id to edit text variables
         txt_place=findViewById(R.id.txtplace);
         radio_type =findViewById(R.id.radiotype);
 
@@ -51,7 +51,7 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
 
                 Etypeoption= radio_type.findViewById(i);
 
-                switch(i) {
+                switch(i) {                    //Check the event type that the user selecting radio button from switch case
                     case R.id.radioButton:
                         streventtype =  Etypeoption.getText().toString();
                         break;
@@ -75,23 +75,27 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
             }
         });
 
+        //get the user selected id from the list view of the previous activity and assign it to tempholder
         final String tempholder= getIntent().getStringExtra("clickid").toString();
         button=findViewById(R.id.button);
 
 
-        dbref =FirebaseDatabase.getInstance().getReference().child("Events").child(tempholder);
+        dbref =FirebaseDatabase.getInstance().getReference().child("Events").child(tempholder);  //get the instance of the firbase databse
 
         dbref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                         if (dataSnapshot.hasChildren()){
+                            //set the values to textfileds which are getting from the database
+
                             txt_name.setText(dataSnapshot.child("ename").getValue().toString());
                             txt_place.setText(dataSnapshot.child("place").getValue().toString());
 
                         }
 
                         else{
+                            //display a toast message if there is no values to retrieve
                             Toast.makeText(getApplicationContext(),"No values to retrieve",Toast.LENGTH_LONG).show();
                         }
                     }
@@ -111,9 +115,9 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
             public void onClick(View view) {
                 boolean validation =validation();
 
-                if (validation==true) {
+                if (validation==true) {               //check if the validation is true
 
-                    openeditdeletepart2();
+                    openeditdeletepart2();             //if the validation is true execute the openeditpart2 function
 
                 }
 
@@ -127,9 +131,9 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
     private void openeditdeletepart2() {
 
 
-        final String id= getIntent().getStringExtra("clickid").toString();
-        Intent i = new Intent(this, EditDeleteEventpart2.class);
-        i.putExtra("clickid",id);
+        final String id= getIntent().getStringExtra("clickid").toString();   //get the clicked it and anssign it to a variable
+        Intent i = new Intent(this, EditDeleteEventpart2.class);      //create an intent to go to next activity
+        i.putExtra("clickid",id);                                            //send the values to the next activity using putextra
         i.putExtra("ename",txt_name.getText().toString());
         i.putExtra("eplace",txt_place.getText().toString());
         i.putExtra("radiotype", streventtype);
@@ -137,15 +141,15 @@ public class EditDeleteEventpart1 extends AppCompatActivity {
     }
 
 
-    public boolean validation(){
+    public boolean validation(){                           //implement the validation method
         final    String name=txt_name.getText().toString();
 
-        String eventplace= txt_place.getEditableText().toString().trim();
+        String eventplace= txt_place.getEditableText().toString().trim();  //assign edit text values to String variables
         String eventname=txt_name.getEditableText().toString().trim();
 
-        if(eventplace.isEmpty()) {
-            txt_place.setError("Field can't be empty");
-            return false;
+        if(eventplace.isEmpty()) {                                     //check the assigned String variables are empty
+            txt_place.setError("Field can't be empty");                //set a error message
+            return false;                                              //if the variable is empty return false
         }
 
         else

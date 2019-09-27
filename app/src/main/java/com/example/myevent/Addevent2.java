@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Addevent2 extends AppCompatActivity {
 
-    private Button b;
+    private Button b;                   //declare all variables
     EditText txt_date, txt_people;
     DatabaseReference dbref;
 
@@ -38,10 +38,12 @@ public class Addevent2 extends AppCompatActivity {
         setContentView(R.layout.activity_addevent2);
 
 
-        txt_date=findViewById(R.id.txtdate);
+        txt_date=findViewById(R.id.txtdate);                    //asign  xml file textfileds to edit text variables
         txt_people=findViewById(R.id.txtpeople);
 
         b=(Button) findViewById(R.id.addevent);
+
+        //get the passed variables from the previous activity and assign them to string variables
 
         final String eplace= getIntent().getStringExtra("eplace").toString();
         final String ename= getIntent().getStringExtra("ename").toString();
@@ -49,7 +51,7 @@ public class Addevent2 extends AppCompatActivity {
 
         radio_Sponsors = findViewById(R.id.radioGroup2);
 
-        radio_Sponsors.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        radio_Sponsors.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {     //Check the sponsorship options  selected by the user
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
@@ -75,15 +77,15 @@ public class Addevent2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                boolean validate = validation();
+                boolean validate = validation();    //assign validation return value to validate variable
 
-                if (validate == true) {
+                if (validate == true) {        //check if the validation is true
 
 
-                    dbref = FirebaseDatabase.getInstance().getReference().child("Events");
+                    dbref = FirebaseDatabase.getInstance().getReference().child("Events");      //declare the firebase reference
 
-                    evt = new Event();
-                    evt.setEname(ename);
+                    evt = new Event();            //create a object from Event model class
+                    evt.setEname(ename);          //set the values to the object
                     evt.setPlace(eplace);
                     evt.setType(etype);
                     evt.setDate(txt_date.getText().toString().trim());
@@ -91,9 +93,9 @@ public class Addevent2 extends AppCompatActivity {
                     evt.setSponsors(strsponsor);
 
 
-                    dbref.child(evt.getEname().toString()).setValue(evt);
+                    dbref.child(evt.getEname().toString()).setValue(evt);   //pass the Event object to the databse
 
-
+                    //display toast message if the data saved successfully
                     Toast.makeText(getApplicationContext(), "Data saved succesfully", Toast.LENGTH_LONG).show();
                     openafteraddevent();
                     cleancontrol();
@@ -109,7 +111,7 @@ public class Addevent2 extends AppCompatActivity {
 
     }
 
-    private void openafteraddevent() {
+    private void openafteraddevent() {           //create a method to open a the next activity
         Intent i = new Intent(this, Aftereventadded.class);
         startActivity(i);
 
@@ -124,17 +126,18 @@ public class Addevent2 extends AppCompatActivity {
 
 
     public boolean validation(){
+        //assign edit text values to String variables
         String eventdate= txt_date.getEditableText().toString().trim();
         String eventpeople=txt_people.getEditableText().toString().trim();
 
-        if(eventdate.isEmpty()) {
-            txt_date.setError("Field can't be empty");
-            return false;
+        if(eventdate.isEmpty()) {                    //check the assigned String variables are empty
+            txt_date.setError("Field can't be empty");    //set a error message
+            return false;                                //if the variable is empty return false
         }
 
-        else if (eventpeople.isEmpty()){
-            txt_people.setError("Field can't be empty");
-            return  false;
+        else if (eventpeople.isEmpty()){               //check the assigned String variables are empty
+            txt_people.setError("Field can't be empty");     //set a error message
+            return  false;                                  //if the variable is empty return false
         }
 
         else
