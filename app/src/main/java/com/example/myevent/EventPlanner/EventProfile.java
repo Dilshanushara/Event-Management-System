@@ -1,10 +1,8 @@
 package com.example.myevent.EventPlanner;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,14 +10,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myevent.Common.Common;
-import com.example.myevent.Model.EventPlanner;
+import com.example.myevent.Customer.UpdateName;
 import com.example.myevent.R;
-import com.example.myevent.SignUp;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class EventProfile extends AppCompatActivity {
 
@@ -33,16 +27,16 @@ public class EventProfile extends AppCompatActivity {
         setContentView(R.layout.activity_evtprofile);
 
 
-                TextView ProfileName = (TextView)findViewById(R.id.ProfileName);
+                TextView ProfileName = (TextView)findViewById(R.id.txtfname);
                 ProfileName.setText(Common.currenteventplanner.getName());
 
-                TextView Profileemail = (TextView)findViewById(R.id.Profileemail);
+                TextView Profileemail = (TextView)findViewById(R.id.txtemail);
                 Profileemail.setText(Common.currenteventplanner.getEmail());
 
-                TextView Profilenumber = (TextView)findViewById(R.id.Profilenumber);
+                TextView Profilenumber = (TextView)findViewById(R.id.txtnumber);
                 Profilenumber.setText(Common.currenteventplanner.getPhone());
 
-                TextView ProfileAge = (TextView)findViewById(R.id.ProfileAge);
+                TextView ProfileAge = (TextView)findViewById(R.id.txtlname);
                 ProfileAge.setText(Common.currenteventplanner.getAge());
 
                 TextView Profiledescription = (TextView)findViewById(R.id.Profiledescription);
@@ -50,7 +44,7 @@ public class EventProfile extends AppCompatActivity {
 
 
         btndeactivate = (Button)findViewById(R.id.btndeactivate);
-        btneditname= (Button)findViewById(R.id.btneditname);
+        btneditname= (Button)findViewById(R.id.btnfname);
 
 
 
@@ -73,7 +67,7 @@ public class EventProfile extends AppCompatActivity {
         btneditname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent changename = new Intent(EventProfile.this,UpdateName.class);
+                Intent changename = new Intent(EventProfile.this, UpdateName.class);
                 startActivity(changename);
                 finish();
 

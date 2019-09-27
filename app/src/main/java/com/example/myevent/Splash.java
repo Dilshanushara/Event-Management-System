@@ -8,6 +8,10 @@ import android.os.Handler;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myevent.Customer.Home;
+import com.example.myevent.Customer.Login;
+import com.example.myevent.Customer.Register;
+
 public class Splash extends AppCompatActivity {
 
     private static  int Splash=4000;
@@ -21,7 +25,7 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i=new Intent(Splash.this,Home.class);
+                Intent i=new Intent(Splash.this, Home.class);
                 startActivity(i);
                 finish();
 

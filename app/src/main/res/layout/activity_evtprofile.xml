@@ -97,7 +97,7 @@
         app:layout_constraintVertical_bias="0.477" />
 
     <TextView
-        android:id="@+id/ProfileName"
+        android:id="@+id/txtfname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
@@ -116,7 +116,7 @@
         app:layout_constraintVertical_bias="0.218" />
 
     <TextView
-        android:id="@+id/Profileemail"
+        android:id="@+id/txtemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -135,7 +135,7 @@
         app:layout_constraintVertical_bias="0.32" />
 
     <TextView
-        android:id="@+id/Profilenumber"
+        android:id="@+id/txtnumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -154,7 +154,7 @@
         app:layout_constraintVertical_bias="0.386" />
 
     <TextView
-        android:id="@+id/ProfileAge"
+        android:id="@+id/txtlname"
         android:layout_width="34dp"
         android:layout_height="0dp"
         android:layout_marginStart="160dp"
@@ -250,7 +250,7 @@
         android:background="@drawable/mybutton"/>
 
     <Button
-        android:id="@+id/btneditname"
+        android:id="@+id/btnfname"
         android:layout_width="45dp"
         android:layout_height="32dp"
         android:layout_marginStart="8dp"
@@ -269,7 +269,7 @@
         app:layout_constraintVertical_bias="0.203" />
 
     <Button
-        android:id="@+id/btneditemail"
+        android:id="@+id/btnemail"
         android:layout_width="45dp"
         android:layout_height="32dp"
         android:layout_marginStart="8dp"
@@ -307,7 +307,7 @@
         app:layout_constraintVertical_bias="0.544" />
 
     <Button
-        android:id="@+id/btneditage"
+        android:id="@+id/btnlname"
         android:layout_width="45dp"
         android:layout_height="32dp"
         android:layout_marginStart="8dp"
@@ -326,7 +326,7 @@
         app:layout_constraintVertical_bias="0.454" />
 
     <Button
-        android:id="@+id/btneditphonenumber"
+        android:id="@+id/btnnumber"
         android:layout_width="45dp"
         android:layout_height="32dp"
         android:layout_marginStart="8dp"
