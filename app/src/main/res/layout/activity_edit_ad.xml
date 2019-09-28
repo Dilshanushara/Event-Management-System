@@ -8,7 +8,7 @@
     tools:context=".post_add">
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btnUpCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -28,7 +28,7 @@
         app:layout_constraintVertical_bias="0.947" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/btnUpSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -38,7 +38,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/holo_green_light"
-        android:onClick="save_ad"
+        android:onClick="btnUpSave"
         android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -215,7 +215,7 @@
         app:srcCompat="@drawable/ev9" />
 
     <EditText
-        android:id="@+id/editText17"
+        android:id="@+id/txtUpName"
         android:layout_width="225dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
@@ -225,8 +225,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        android:hint="Change Name"
         android:inputType="textPersonName"
-        android:text="Change Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -234,7 +234,7 @@
         app:layout_constraintVertical_bias="0.142" />
 
     <EditText
-        android:id="@+id/editText18"
+        android:id="@+id/txtUpDes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -244,8 +244,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        android:hint="Change Description"
         android:inputType="textPersonName"
-        android:text="Change Description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
@@ -254,7 +254,7 @@
         app:layout_constraintVertical_bias="0.259" />
 
     <EditText
-        android:id="@+id/editText19"
+        android:id="@+id/txtUpEmail"
         android:layout_width="347dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
@@ -264,8 +264,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        android:hint="Change E-mail"
         android:inputType="textPersonName"
-        android:text="Change E-mail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
@@ -274,7 +274,7 @@
         app:layout_constraintVertical_bias="0.614" />
 
     <EditText
-        android:id="@+id/editText20"
+        android:id="@+id/txtUpConNo"
         android:layout_width="347dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
@@ -284,8 +284,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        android:hint="Change Phone"
         android:inputType="textPersonName"
-        android:text="Change Phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"

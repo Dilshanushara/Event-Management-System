@@ -1,5 +1,6 @@
 package com.example.myevent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,11 +11,22 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.myevent.Model.Event;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 public class Myallevents extends AppCompatActivity {
 
+    DatabaseReference dbref;               //declare all variables
 
+    ArrayAdapter<String>adapter;
+    ArrayList<String>arrayList;
+    Event evt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,45 +35,47 @@ public class Myallevents extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ListView myeventlist = (ListView) findViewById(R.id.myeventlist);
-       // Log.d("onCreate ,Started");
+        evt=new Event();             //create a object using Event model class
+        final ListView listView= (ListView) findViewById(R.id.myeventlist);      //create a list view
 
+        final FirebaseDatabase[] databse = {FirebaseDatabase.getInstance()};     //get a database instance
+        dbref = FirebaseDatabase.getInstance().getReference().child("Events");
 
+         arrayList=new ArrayList<>();             //declare a array list
 
-         ArrayList <String> myarrayy=new ArrayList<>();
+         adapter=new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,arrayList);    //set a array adapter
 
-        myarrayy.add("SLIIT Walk");
-        myarrayy.add("Dulana's b'day party");
-
-         myarrayy.add("SLIIT Annual Get to Gether");
-         myarrayy.add("Chayanika and Lakna's Wedding");
-
-
-
-
-        ArrayAdapter a1=new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1,myarrayy);
-
-        myeventlist.setAdapter(a1);
-
-        myeventlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        dbref.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                Intent i1=new Intent(view.getContext(),EditDeleteEventpart1.class);
-                startActivity(i1);
+
+                for(DataSnapshot ds:dataSnapshot.getChildren()){      //for loop for get the all data from the databse
+
+                    evt = ds.getValue(Event.class);                 //assign the values for evt object
+                    arrayList.add(evt.getEname());                  //add the event name of each event to the arraylist
+                }
+                listView.setAdapter(adapter);
+
             }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-
-
+            }
         });
+        //implement listview onitemclick litnerner to get the id of the event that the user is clicking
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        Intent i1=new Intent(Myallevents.this,EditDeleteEventpart1.class);    //create a intent for the next activity
 
+                        //get the  clicked item id and assign it to clickid and pass it to the next activity
+                        i1.putExtra("clickid",listView.getItemAtPosition(i).toString());
+                        startActivity(i1);
+                    }
+                });
 
-
-
-
-
-
-}
+    }
 }
