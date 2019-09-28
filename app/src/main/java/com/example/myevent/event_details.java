@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myevent.Model.edit_ad1;
@@ -18,24 +19,24 @@ import com.google.firebase.database.ValueEventListener;
 
 public class event_details extends AppCompatActivity {
 
-    EditText txtName, txtVenue, txtDate, txtTime, txtEtype;
+    TextView txtName, txtVenue, txtDate, txtTime, txtEtype;
     DatabaseReference dbRef;
-    com.example.myevent.Model.event_details1;
+    com.example.myevent.Model.event_details1 Std1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_details);
 
-        txtName = findViewById(R.id.Vname);
-        txtVenue = findViewById(R.id.Vvenue);
-        txtDate = findViewById(R.id.Vdate);
-        txtTime = findViewById(R.id.Vtime);
-        txtEtype = findViewById(R.id.Vtype);
+        txtName = (TextView)findViewById(R.id.evname);
+        txtVenue = (TextView)findViewById(R.id.evvenue);
+        txtDate = (TextView)findViewById(R.id.evdate);
+        txtTime = (TextView)findViewById(R.id.evtime);
+        txtEtype = (TextView)findViewById(R.id.evtype);
 
         Std1 = new event_details1();
 
-        DatabaseReference readRef = FirebaseDatabase.getInstance().getInstance().child("event_details1").child("Std1");
+        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference("PostAdd1").child("event_details1").child("Std1");
         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
