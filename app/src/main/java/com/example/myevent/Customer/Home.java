@@ -1,10 +1,12 @@
-package com.example.myevent;
+package com.example.myevent.Customer;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myevent.R;
 
 public class Home extends AppCompatActivity {
 
