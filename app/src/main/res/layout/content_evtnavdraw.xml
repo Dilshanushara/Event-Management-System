@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8AE0EB"
+    android:background="@drawable/my_bg_anim"
     android:orientation="vertical"
     android:padding="10dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -21,35 +21,7 @@
 
         >
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/message12345"
-            android:layout_width="120dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
 
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/circlelightblue"
-                    android:padding="10dp"
-                    app:srcCompat="@drawable/ic_mode_comment_black_24dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Message"
-                    android:textSize="15dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
 
         <androidx.cardview.widget.CardView
@@ -126,35 +98,6 @@
         </androidx.cardview.widget.CardView>
 
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/notification345"
-            android:layout_width="120dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/circlelightblue"
-                    android:padding="10dp"
-                    app:srcCompat="@drawable/ic_notifications_black_24dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Notification"
-                    android:textSize="15dp" />
-
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
 
     </LinearLayout>

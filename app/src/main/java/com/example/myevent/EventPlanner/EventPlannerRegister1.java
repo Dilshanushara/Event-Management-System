@@ -8,7 +8,6 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myevent.Model.EventPlanner;
 import com.example.myevent.R;
 
 public class EventPlannerRegister1 extends AppCompatActivity {
@@ -21,12 +20,12 @@ public class EventPlannerRegister1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registeraseventplanner);
 
-        name = (EditText)findViewById(R.id.EdtEventplannerName);
-        email = (EditText)findViewById(R.id.EdtEventPlannerEmail);
-        phone = (EditText)findViewById(R.id.EdtEventPlannerPhone);
+        name = (EditText)findViewById(R.id.evtDescription);
+        email = (EditText)findViewById(R.id.evtPrice);
+        phone = (EditText)findViewById(R.id.evtNumber);
         age = (EditText)findViewById(R.id.EdtEventPlannerAge);
 
-        next = (Button)findViewById(R.id.btnEventPlannerNext);
+        next = (Button)findViewById(R.id.BtnConfirm);
         BtnEventPlannerSignIn = (Button)findViewById(R.id.BtnEventPlannerSignIn);
 
 

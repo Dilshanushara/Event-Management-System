@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventPlanner.EventProfile">
+    tools:context=".EventPlanner.EventPlannerProfile"
+    android:background="@drawable/my_bg_anim">
 
     <TextView
         android:id="@+id/textView19"
@@ -58,30 +59,12 @@
         app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.563" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/evtregvewnumber"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.386" />
+        app:layout_constraintVertical_bias="0.471" />
 
     <TextView
         android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -94,29 +77,28 @@
         app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
+        app:layout_constraintVertical_bias="0.379" />
 
     <TextView
-        android:id="@+id/txtfname"
+        android:id="@+id/ProfileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginLeft="144dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Promod Aravinda"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView19"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.218" />
 
     <TextView
-        android:id="@+id/txtemail"
+        android:id="@+id/Profileemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -126,56 +108,35 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="pro@gmail.com"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView20"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.381"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.307" />
 
     <TextView
-        android:id="@+id/txtnumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/ProfileAge"
+        android:layout_width="34dp"
+        android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="0702378999"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView23"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.386" />
-
-    <TextView
-        android:id="@+id/txtlname"
-        android:layout_width="34dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:text="22"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
+        app:layout_constraintVertical_bias="0.377" />
 
     <TextView
         android:id="@+id/Profiledescription"
-        android:layout_width="wrap_content"
-        android:layout_height="14dp"
+        android:layout_width="89dp"
+        android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -183,13 +144,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="i am planner"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView22"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.559" />
+        app:layout_constraintVertical_bias="0.478" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -230,27 +190,27 @@
 
     <Button
         android:id="@+id/btndeactivate"
-        android:layout_width="107dp"
-        android:layout_height="39dp"
+        android:layout_width="160dp"
+        android:layout_height="61dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/mybutton"
+        android:padding="10dp"
         android:text="@string/dect"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.764"
-        android:padding="10dp"
-        android:textColor="#ffffff"
-        android:background="@drawable/mybutton"/>
+        app:layout_constraintVertical_bias="0.764" />
 
     <Button
-        android:id="@+id/btnfname"
+        android:id="@+id/btneditname"
         android:layout_width="45dp"
         android:layout_height="32dp"
         android:layout_marginStart="8dp"
@@ -269,7 +229,7 @@
         app:layout_constraintVertical_bias="0.203" />
 
     <Button
-        android:id="@+id/btnemail"
+        android:id="@+id/btneditemail"
         android:layout_width="45dp"
         android:layout_height="32dp"
         android:layout_marginStart="8dp"
@@ -285,7 +245,7 @@
         app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView31"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.277" />
 
     <Button
         android:id="@+id/btneditdescription"
@@ -304,10 +264,10 @@
         app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView31"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintVertical_bias="0.46" />
 
     <Button
-        android:id="@+id/btnchsngeemail"
+        android:id="@+id/btneditage"
         android:layout_width="45dp"
         android:layout_height="32dp"
         android:layout_marginStart="8dp"
@@ -323,26 +283,7 @@
         app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView31"
-        app:layout_constraintVertical_bias="0.454" />
-
-    <Button
-        android:id="@+id/btnnumber"
-        android:layout_width="45dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="edit"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView31"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintVertical_bias="0.367" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

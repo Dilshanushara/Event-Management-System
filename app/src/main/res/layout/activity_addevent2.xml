@@ -42,6 +42,7 @@
         app:layout_constraintVertical_bias="0.541" />
 
     <RadioGroup
+        android:id="@+id/radioGroup2"
         android:layout_width="166dp"
         android:layout_height="87dp"
         android:layout_marginStart="8dp"
@@ -73,7 +74,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/addevent"
         android:layout_width="218dp"
         android:layout_height="53dp"
         android:layout_marginStart="8dp"
@@ -92,7 +93,7 @@
         app:layout_constraintVertical_bias="0.932" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/txtpeople"
         android:layout_width="276dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
@@ -129,7 +130,7 @@
         app:layout_constraintVertical_bias="0.317" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/txtdate"
         android:layout_width="276dp"
         android:layout_height="54dp"
         android:layout_marginStart="8dp"

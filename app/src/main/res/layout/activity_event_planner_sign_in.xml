@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventPlanner.EventPlannerSignIn">
+    tools:context=".EventPlanner.EventPlannerSignIn"
+    android:background="@drawable/my_bg_anim">
 
 
     <LinearLayout
@@ -20,11 +21,13 @@
             android:text="Sign In"
             android:textSize="28dp"
             android:textColor="#ffff"
-            android:background="#000000"
+            android:background="@color/design_default_color_primary_dark"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
             android:layout_marginLeft="23dp"
             android:layout_marginRight="23dp"
+
+
             />
 
     </LinearLayout>

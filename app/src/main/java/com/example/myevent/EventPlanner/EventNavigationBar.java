@@ -11,6 +11,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 
+import com.example.myevent.EventPlanner.CardView.CustomerPostView;
 import com.example.myevent.R;
 import com.example.myevent.event_details;
 import com.example.myevent.post_ad;
@@ -47,17 +48,14 @@ public class EventNavigationBar extends AppCompatActivity
 
 
 
-                messagev = (CardView) findViewById(R.id.message12345);
-
                 postadd = (CardView) findViewById(R.id.Post1);
 
                 cutomerpost= (CardView) findViewById(R.id.custom1);
 
-                notificationv1 = (CardView) findViewById(R.id.notification345);
 
 
-                messagev.setOnClickListener(this);
-                notificationv1.setOnClickListener(this);
+
+
                 postadd.setOnClickListener(this);
                 cutomerpost.setOnClickListener(this);
 
@@ -79,15 +77,10 @@ public class EventNavigationBar extends AppCompatActivity
             case R.id.Post1 : i =new Intent(this, post_ad.class);startActivity(i);break;
 
 
-            case R.id.custom1 : i =new Intent(this, EventPlannerCustomerPost.class);startActivity(i);break;
+            case R.id.custom1 : i =new Intent(this, CustomerPostView.class);startActivity(i);break;
 
 
 
-
-           case R.id.message12345 : i =new Intent(this, EventPlannerMessage.class);startActivity(i);break;
-
-
-            case R.id.notification345 : i =new Intent(this, evtnotification4567.class);startActivity(i);break;
 
 
 
@@ -149,7 +142,7 @@ public class EventNavigationBar extends AppCompatActivity
 
         } else if (id == R.id.nav_profile) {
 
-            Intent intent = new Intent(this, EventProfile.class);
+            Intent intent = new Intent(this, EventPlannerProfile.class);
 
             startActivity(intent);
 
