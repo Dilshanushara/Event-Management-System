@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EventPlanner.UpdateName"></activity>
+        <activity android:name=".EventPlanner.ConfirmForm"></activity>
+        <activity android:name=".EventPlanner.CardView.CustomerPostView" />
+        <activity android:name=".EventPlanner.EventPlannerUpdateEmail" />
+        <activity android:name=".EventPlanner.EventPlannerUpdateName" />
         <activity android:name=".EventPlanner.EventPlannerSignIn" />
         <activity
             android:name=".Main2Activity"
@@ -19,7 +22,7 @@
         <activity android:name=".EventPlanner.EventPlannerMessage" />
         <activity android:name=".EventPlanner.EventPlannerCustomerPost" />
         <activity android:name=".EventPlanner.EventPlannerPostAdds" />
-        <activity android:name=".EventPlanner.EventProfile" />
+        <activity android:name=".EventPlanner.EventPlannerProfile" />
         <activity android:name=".forgotpassword1" />
         <activity android:name=".Forgotpassword" />
         <activity android:name=".Home" />

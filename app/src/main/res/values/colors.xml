@@ -6,4 +6,8 @@
     <color name="lightblue">#add8e6</color>
     <color name="lightgreen">#CCFFCC</color>
 
+    <color name="btnSignUp">#39796b</color>
+    <color name="btnSignActive">#A9d440</color>
+
+
 </resources>

@@ -1,10 +1,8 @@
 package com.example.myevent.EventPlanner;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,18 +10,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myevent.Common.Common;
-import com.example.myevent.Model.EventPlanner;
 import com.example.myevent.R;
-import com.example.myevent.SignUp;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-public class EventProfile extends AppCompatActivity {
+public class EventPlannerProfile extends AppCompatActivity {
 
-    Button btndeactivate,btneditname;
+    Button btndeactivate,btneditname,btneditemail;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     final DatabaseReference tabel_eventplanner=database.getReference("Eventplanner");
 
@@ -39,8 +32,6 @@ public class EventProfile extends AppCompatActivity {
                 TextView Profileemail = (TextView)findViewById(R.id.Profileemail);
                 Profileemail.setText(Common.currenteventplanner.getEmail());
 
-                TextView Profilenumber = (TextView)findViewById(R.id.Profilenumber);
-                Profilenumber.setText(Common.currenteventplanner.getPhone());
 
                 TextView ProfileAge = (TextView)findViewById(R.id.ProfileAge);
                 ProfileAge.setText(Common.currenteventplanner.getAge());
@@ -51,6 +42,7 @@ public class EventProfile extends AppCompatActivity {
 
         btndeactivate = (Button)findViewById(R.id.btndeactivate);
         btneditname= (Button)findViewById(R.id.btneditname);
+        btneditemail= (Button)findViewById(R.id.btneditemail);
 
 
 
@@ -61,8 +53,8 @@ public class EventProfile extends AppCompatActivity {
             public void onClick(View view) {
 
                 tabel_eventplanner.child(Common.currenteventplanner.getPhone()).removeValue();
-                Toast.makeText(EventProfile.this,"Deleteted!",Toast.LENGTH_SHORT).show();
-                Intent delete = new Intent(EventProfile.this,EventPlannerRegister1.class);
+                Toast.makeText(EventPlannerProfile.this,"Deleteted!",Toast.LENGTH_SHORT).show();
+                Intent delete = new Intent(EventPlannerProfile.this,EventPlannerRegister1.class);
                 Common.currenteventplanner = null;
                 startActivity(delete);
                 finish();
@@ -73,12 +65,24 @@ public class EventProfile extends AppCompatActivity {
         btneditname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent changename = new Intent(EventProfile.this,UpdateName.class);
+                Intent changename = new Intent(EventPlannerProfile.this, EventPlannerUpdateName.class);
                 startActivity(changename);
                 finish();
 
             }
         });
+
+        btneditemail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent changename = new Intent(EventPlannerProfile.this, EventPlannerUpdateEmail.class);
+                startActivity(changename);
+                finish();
+
+            }
+        });
+
 
 
 

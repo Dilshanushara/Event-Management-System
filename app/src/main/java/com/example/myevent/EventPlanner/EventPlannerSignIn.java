@@ -44,7 +44,7 @@ public class EventPlannerSignIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                table_Eventplanner.addValueEventListener(new ValueEventListener() {
+                table_Eventplanner.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.child(edtPhone.getText().toString()).exists()) {
