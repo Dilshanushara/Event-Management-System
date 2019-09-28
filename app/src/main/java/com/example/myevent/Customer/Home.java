@@ -22,10 +22,10 @@ public class Home extends AppCompatActivity {
 
     }
 
-    public void signup1(View view){
-        Intent intent=new Intent(this,SignUp.class);
-
-        startActivity(intent);
-
-    }
+//    public void signup1(View view){
+//        Intent intent=new Intent(this,SignUp.class);
+//
+//        startActivity(intent);
+//
+//    }
 }

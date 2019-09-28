@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5E5FA9E7"
+    android:background="@drawable/my_bg_anim"
     tools:context=".Customer.Login">
 
     <EditText
@@ -58,6 +58,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:onClick="afterlogin"
+        android:background="@drawable/mybutton"
         android:text="@string/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,6 +128,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/design_default_color_primary_dark"
         android:text="@string/singin"
         android:textSize="25dp"
         app:fontFamily="@font/coming_soon"

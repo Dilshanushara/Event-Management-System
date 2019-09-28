@@ -25,7 +25,7 @@ public class UpdateName extends AppCompatActivity {
         setContentView(R.layout.activity_update_name);
 
         UpdateName = (Button)findViewById(R.id.btnchsngeemail);
-        txtfname = (EditText) findViewById(R.id.txtemail);
+        txtfname = (EditText) findViewById(R.id.txtfname);
 
 
         UpdateName.setOnClickListener(new View.OnClickListener() {

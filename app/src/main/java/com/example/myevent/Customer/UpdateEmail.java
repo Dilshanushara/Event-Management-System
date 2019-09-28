@@ -27,7 +27,7 @@ public class UpdateEmail extends AppCompatActivity {
         setContentView(R.layout.activity_update_email);
 
         btnchsngeemail = (Button) findViewById(R.id.btnchsngeemail);
-        txtemail = (EditText) findViewById(R.id.txtemail);
+        txtemail = (EditText) findViewById(R.id.txtfname);
 
         btnchsngeemail.setOnClickListener(new View.OnClickListener() {
             @Override

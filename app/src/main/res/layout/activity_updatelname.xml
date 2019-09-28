@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Customer.Updatelname">
+    tools:context=".Customer.Updatelname"
+    android:background="@drawable/my_bg_anim">
 
     <EditText
-        android:id="@+id/txtemail"
+        android:id="@+id/txtfname"
         android:layout_width="325dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
@@ -27,13 +28,14 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="353dp"
-        android:layout_height="38dp"
+        android:layout_width="384dp"
+        android:layout_height="43dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@color/design_default_color_primary_dark"
         android:text="Change the  Last Name"
         android:textAlignment="center"
         android:textSize="25dp"
@@ -55,6 +57,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Change"
+        android:background="@drawable/mybutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.537"

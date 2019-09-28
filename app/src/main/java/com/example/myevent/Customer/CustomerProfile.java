@@ -35,7 +35,7 @@ public class CustomerProfile extends AppCompatActivity {
         TextView ProfileName = (TextView)findViewById(R.id.txtfname);
         ProfileName.setText(Common.currcustomer.getFname());
 
-        TextView Profileemail = (TextView)findViewById(R.id.txtemail);
+        TextView Profileemail = (TextView)findViewById(R.id.txtfname);
         Profileemail.setText(Common.currcustomer.getEmail());
 
         TextView Profilenumber = (TextView)findViewById(R.id.txtnumber);

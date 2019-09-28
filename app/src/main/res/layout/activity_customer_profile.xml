@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Customer.CustomerProfile">
+    tools:context=".Customer.CustomerProfile"
+    android:background="@drawable/my_bg_anim">
 
 
     <TextView
@@ -98,7 +99,7 @@
         app:layout_constraintVertical_bias="0.218" />
 
     <TextView
-        android:id="@+id/txtemail"
+        android:id="@+id/txtfname"
         android:layout_width="108dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -239,7 +240,7 @@
         android:layout_marginRight="8dp"
         android:text="edit"
         android:textSize="10dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtemail"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtfname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent" />

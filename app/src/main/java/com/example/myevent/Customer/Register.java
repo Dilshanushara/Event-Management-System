@@ -9,8 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.myevent.Afterlogin;
-import com.example.myevent.EventPlanner.EventPlannerRegister1;
+//import com.example.myevent.EventPlanner.EventPlannerRegister1;
 import com.example.myevent.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -41,7 +40,7 @@ public class Register extends AppCompatActivity {
 
         txt_fname = findViewById(R.id.txtfname);
         txt_lname = findViewById(R.id.txtlname);
-        txt_email = findViewById(R.id.txtemail);
+        txt_email = findViewById(R.id.txtfname);
         txt_contact = findViewById(R.id.txtpassword);
         txt_number = findViewById(R.id.txtnumber);
 
