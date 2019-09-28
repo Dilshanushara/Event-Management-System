@@ -1,27 +1,23 @@
 package com.example.myevent.Customer;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myevent.Afterlogin;
 import com.example.myevent.Common.Common;
 import com.example.myevent.R;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class CustomerProfile extends AppCompatActivity {
 
-    Button btndeactivate,btnfname,btnlname,btnemail,btnnumber;
+    Button btndeactivate,btnfname,btnlname,btnemail,btnnumber,btnSave;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     final DatabaseReference tabel_customer=database.getReference("customer");
@@ -30,7 +26,7 @@ public class CustomerProfile extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_profile);
 
@@ -53,9 +49,11 @@ public class CustomerProfile extends AppCompatActivity {
 
         btndeactivate = (Button)findViewById(R.id.btndeactivate);
         btnfname= (Button)findViewById(R.id.btnfname);
-        btnlname= (Button)findViewById(R.id.btnlname);
+        btnlname= (Button)findViewById(R.id.btnchsngeemail);
         btnemail= (Button)findViewById(R.id.btnemail);
         btnnumber= (Button)findViewById(R.id.btnnumber);
+        btnSave = (Button)findViewById(R.id.btnSave);
+
 
         btndeactivate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,18 +83,25 @@ public class CustomerProfile extends AppCompatActivity {
                 finish();
             }
         });
+        btnemail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent changeemail = new Intent(CustomerProfile.this,UpdateEmail.class);
+                startActivity(changeemail);
+                finish();
+            }
+        });
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent saveupdate = new Intent(CustomerProfile.this, Afterlogin.class);
+                startActivity(saveupdate);
+                finish();
 
 
-
-
-
-
-
-
-
+            }
+        });
 
     }
-
-
 
 }

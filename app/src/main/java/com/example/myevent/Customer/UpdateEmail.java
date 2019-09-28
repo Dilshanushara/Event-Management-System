@@ -14,37 +14,37 @@ import com.example.myevent.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class UpdateName extends AppCompatActivity {
 
-    Button UpdateName;
-    EditText txtfname;
+public class UpdateEmail extends AppCompatActivity {
+
+
+    Button btnchsngeemail;
+    EditText txtemail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_name);
+        setContentView(R.layout.activity_update_email);
 
-        UpdateName = (Button)findViewById(R.id.btnchsngeemail);
-        txtfname = (EditText) findViewById(R.id.txtemail);
+        btnchsngeemail = (Button) findViewById(R.id.btnchsngeemail);
+        txtemail = (EditText) findViewById(R.id.txtemail);
 
-
-        UpdateName.setOnClickListener(new View.OnClickListener() {
+        btnchsngeemail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-
-                String name=txtfname.getText().toString();
-
+                String email=txtemail.getText().toString();
 
                 DatabaseReference updateData = FirebaseDatabase.getInstance().getReference("customer").child(Common.currcustomer.getNumber());
+                updateData.child("email").setValue("email");
 
-                updateData.child("name").setValue(name);
-
-                Toast.makeText(UpdateName.this,"Change name",Toast.LENGTH_LONG).show();
-                Intent updated = new Intent(UpdateName.this, CustomerProfile.class);
-                Common.currcustomer.setFname(name);
-                startActivity(updated);
+                Toast.makeText(UpdateEmail.this,"Change Email",Toast.LENGTH_LONG).show();
+                Intent update1 = new Intent(UpdateEmail.this,CustomerProfile.class);
+                Common.currcustomer.setEmail(email);
+                startActivity(update1);
                 finish();
+
+
             }
         });
 

@@ -7,7 +7,7 @@
     tools:context=".Customer.Updatelname">
 
     <EditText
-        android:id="@+id/txtlastname"
+        android:id="@+id/txtemail"
         android:layout_width="325dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
@@ -45,7 +45,7 @@
         app:layout_constraintVertical_bias="0.003" />
 
     <Button
-        android:id="@+id/btnlname"
+        android:id="@+id/btnchsngeemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

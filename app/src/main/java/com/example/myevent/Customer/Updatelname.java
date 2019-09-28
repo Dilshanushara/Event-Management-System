@@ -24,8 +24,8 @@ public class Updatelname extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_updatelname);
 
-        btnlname = (Button)findViewById(R.id.btnlname);
-        txtlastname =(EditText)findViewById(R.id.txtlastname);
+        btnlname = (Button)findViewById(R.id.btnchsngeemail);
+        txtlastname =(EditText)findViewById(R.id.txtemail);
 
 
 
